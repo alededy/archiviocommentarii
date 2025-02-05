@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liber I - De Bello Gallico</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+      body {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: bold;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-image: url('papiro.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            border: 4px groove #665e47; 
+            color: #333;
+            overflow-x: hidden; 
+        }
+
+        form input, 
+        form button {
+            font-family: 'Cormorant Garamond', serif;
+        
+                }
+
+        .button {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: bold;
+        }
+
+        header {
+            background-image: url("immagine1.jpg"); 
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+          text-align: center;
+            margin: 0;
+            text-shadow: 2px 2px 5px black;
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex; 
+            justify-content: center;
+            transition: transform 0.5s ease;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            display: block;
+            padding: 8px 15px;
+            background-color: #4a2a2a;
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: #6f3f3f;
+            transform: scale(1.1);
+            text-shadow: 2px 2px 5px black;
+        }
+
+        header nav ul li a:focus {
+            outline: none;
+            border: 2px solid #fff;
+        }
+
+        main {
+            padding: 40px;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #4a2a2a;
+            margin-bottom: 20px;
+        }
+ 
+
+        .quote {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #4a2a2a;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #262626;
+            color: white;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .content-box {
+                width: 90%; 
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+  </style>      
+
+<body>
+  <header>
+    <h1>Liber I - De Bello Gallico</h1>
+      <nav>
+        <ul>
+            <li><a href="archiviocommentarii.html">Home</a></li>
+            <li><a href="giuliocesare.html">Su Giulio Cesare</a></li>
+            <li><a href="pagina2.html">Sul De Bello Gallico</a></li>
+            <li><a href="suldebellocivili.html">Sul De Bello Civili</a></li>
+            <li><a href="#galleria">Galleria artistica</a></li>
+            <li><a href="#contatti">Contatti</a></li>
+        </ul>
+        <form onsubmit="searchText(event)">
+           <input type="text" id="searchInput" placeholder="Cerca una parola..."/>
+           <button type="submit">Cerca</button>
+         </form>
+      </nav>
+  </header>
+  
+  <section class="book-text">
+    <h2>Testo del Liber I</h2>
+    <p>[I] La Gallia nel suo complesso è divisa in tre parti: una è abitata dai Belgi,una dagli Aquitani, la terza da quelli che nella loro lingua si chiamano Celti,nella nostra Galli. Tutte queste popolazioni differiscono tra loro nella lingua,nelle istituzioni e nelle leggi. Divide i Galli dagli Aquitani il fiume Garonnna,dai Belgi la Marna e la Senna. Di tutti questi i più valorosi sono i Belgi,perché sono i più lontani dalla raffinatezza e dalla civiltà della provincia,e molto raramente i mercanti si recano da loro a portarvi quei prodotti cheservono ad effeminari gli animi, e sono i più vicini ai Germani che abitanooltre Reno, con i quali sono ininterrottamente in guerra. Questa è la ragioneper cui anche gli Elvezi superano nel valore gli altri Galli, perché quasi ognigiorno combattono contro i Germani, o tenendoli fuori dal proprio paese oportando essi la guerra nel loro paese. Quella parte che, come ho detto, èabitata dai Galli, inizia dal fiume Rodano; è delimitata dal fiume Garonna,dall’Oceano, dal paese dei Belgi; dalla parte dei Sequani e degli Elvezi toccaanche il fiume Reno; si stende verso settentrione. Il paese dei Belgi cominciadalla parte estrema della Gallia; tocca il corso inferiore del fiume Reno, sistende verso settentrione e oriente. L’Aquitania dal fiume Garonna si stendefino a toccare i monti Pirenei e quella parte dell’Oceano che volge verso laSpagna; si stende tra occidente e settentrione.</p>
+
+    <p>[II] Presso gli Elvezi, Orgetorige fu di gran lunga il più nobile e ricco. Duranteil consolato di Marco Messala e di Pupio Marco Pisone, indotto dal desiderio delregno fece una congiura contro i nobili e convinse la sua gente ad uscire dailoro confini con tutti i loro possessi: era cosa facilissima, dal momento cheeccellevano su tutti per valore militare, impadronendosi del potere di tutta laGallia. Li convinse più facilmente per questo, perché gli Elvezi sonoconfinati da ogni parte per la natura dei luoghi: da una parte dal fiume Renolarghissimo e profondissimo, che divide il territorio degli Elvezi da quello deiGermani; dall’altra parte dall’altissimo monte Iura, che sta tra i Sequani e gliElvezi; dal terzo lato dal lago Lemanno e dal fiume Rodano, che divide laProvenza dagli Elvezi. Per queste ragioni accadeva sia che potevano sconfinaremeno estesamente sia che potevano portare guerra meno facilmente ai popoliconfinanti; da quella parte uomini ansiosi di combattere erano travagliati dagrande malumore. In ragione poi del gran numero di uomini e della gloriamilitare e della forza, stimavano avere dei confini angusti che si estendevanoin longitudine per 240 mila passi, in latitudine per 180.</p>
+
+    <p>[III] Spinti da tali motivi e indotti dal prestigio di Orgetorige, gli Elvezi deciserodi preparare ciò che serviva per la partenza: comprarono quanti più giumenti ecarri fosse possibile, seminarono tutto il grano che gli riuscì di seminare,per averne a sufficienza durante il viaggio, rafforzarono i rapporti di pace edi amicizia con i popoli più vicini. Ritennero che due anni fossero sufficientiper portare a termine i preparativi: con una legge fissarono la partenza alterzo anno. Per eseguire tali operazioni viene scelto Orgetorige, che si assumeil compito di recarsi in ambasceria presso gli altri popoli. Durante la suamissione, il sequano Castico, figlio di Catamantalede, che era stato per moltianni signore dei Sequani e aveva ricevuto dal senato del popolo romano il titolodi amico, venne persuaso da Orgetorige a impadronirsi del regno che inprecedenza era stato del padre. Allo stesso modo Orgetorige convince ad analogaazione l’eduo Dumnorige, al quale dà in sposa sua figlia. Dumnorige erafratello di Diviziaco, a quel tempo principe degli Edui e amatissimo dal suopopolo. Orgetorige dimostra a Castico e a Dumnorige che è assai facile portarea compimento l’impresa, perché egli stesso sta per prendere il potere: gliElvezi, senza dubbio, erano i più forti tra tutti i Galli. Assicura che con lesue truppe e con il suo esercito avrebbe procurato loro il regno. Spinti dallesue parole, si scambiano giuramenti di fedeltà, sperando, una volta ottenuti irispettivi domini, di potersi impadronire di tutta la Gallia mediante i trepopoli più potenti e più forti..</p>
+
+    <p>[IV] Un delatore svelò l’accordo agli Elvezi. Secondo la loro usanza, essicostrinsero Orgetorige a discolparsi incatenato: se lo avessero condannato, lapena comportava il rogo. Nel giorno stabilito per il processo, Orgetorige fecevenire da ogni parte tutti i suoi familiari e servi, circa diecimila persone,nonché tutti i suoi clienti e debitori, che erano molto numerosi. Grazie a essiriuscì a sottrarsi all’interrogatorio. Mentre il popolo, adirato perl’accaduto, cercava di far valere con le armi il proprio diritto e i magistratiradunavano dalle campagne una grande moltitudine di uomini, Orgetorige morì.Non mancò il sospetto, secondo l’opinione degli Elvezi, che si fosse suicidato.</p>
+
+    <p>[V] Dopo la morte di Orgetorige, gli Elvezi cercano ugualmente di attuare ilprogetto di abbandonare il loro territorio. Quando ritengono di essere ormaipronti per la partenza, incendiano tutte le loro città, una dozzina, i lorovillaggi, circa quattrocento, e le singole case private che ancora restavano;danno fuoco a tutto il grano, a eccezione delle scorte che dovevano portare consé, per essere più pronti ad affrontare tutti i pericoli, una volta privatidella speranza di tornare in patria; ordinano che ciascuno porti da casa farinaper tre mesi. Persuadono i Rauraci, i Tulingi e i Latobici, con i qualiconfinavano, a seguire la loro decisione, a incendiare le città e i villaggi ea partire con loro. Accolgono e si aggregano come alleati i Boi, che si eranostabiliti al di là del Reno, erano passati nel Norico e avevano assediatoNoreia.</p>
+
+    <p>[VI] Le strade, attraverso le quali gli Elvezi potevano uscire dal loro territorio,erano in tutto due: la prima, stretta e difficoltosa, attraversava le terre deiSequani tra il monte Giura e il Rodano e permetteva, a stento, il transito di uncarro per volta; inoltre, il Giura incombeva su di essa a precipizio, in modotale che pochissimi bastavano facilmente a impedire il passaggio; la secondaattraversava la nostra provincia ed era molto più agevole e rapida, perché trai territori degli Elvezi e degli Allobrogi, da poco pacificati, scorre ilRodano, che in alcuni punti consente il guado. Ginevra è la città degliAllobrogi più settentrionale e confina con i territori degli Elvezi, ai qualiè collegata da un ponte. Gli Elvezi, per garantirsi via libera, pensavano dipersuadere gli Allobrogi, che non sembravano ancora ben disposti verso i Romani,o di obbligarli con la forza. Ultimati i preparativi per la partenza,stabiliscono la data in cui avrebbero dovuto riunirsi tutti sulla riva delRodano: cinque giorni prima delle calende di aprile, nell’anno del consolato diLucio Pisone e A. Gabinio.</p>
+
+    <p>[VII] Essendo stato annunciato questo a Cesare, cioè che gli Elvezi tentavano dipassare per la nostra provincia, egli si affrettò a partire dalla città e sidiresse verso la Gallia Ulteriore, a marce il più possibile forzate e giunse aGinevra. Ordinò a tutte le province di fornire il numero più grande possibiledi soldati – c’era solamente una legione in Gallia Ulteriore; ordinò ditagliare il ponte che era vicino a Ginevra. Quando gli Elvezi vennero informatidel suo arrivo, inviarono presso di lui i legati più illustri della città,della cui ambasceria Nammeio e Veruclezio ottenevano il posto di capo, per direche loro avevano intenzione di passare per la provincia senza alcun cattivoproposito, per il fatto che non avevano nessun’altra via. Lo pregavano dipermettere loro di fare ciò con il suo assenso. Cesare, poiché ricordava cheil console Lucio Cassio era stato ucciso, e il suo esercito era stato sconfittodagli Elvezi e soggiogato, non ritenne di dover cedere; e pensava che, se sifosse concesso a uomini di animo ostile la facoltà di passare per la provincia,non si sarebbero astenuti dal recar danno e offesa. Tuttavia, per aspettarefinché non arrivassero i soldati che aveva richiesto, rispose che avrebbe presoun giorno per decidere: se volessero una risposta, che tornassero il 13 aprile.</p>
+
+    <p>[VIII] Nel frattempo, impiegando la legione al suo seguito e i soldati giunti dallaprovincia, Cesare scava un fossato ed erige un muro lungo diciannove miglia ealto sedici piedi, dal lago Lemano, che sbocca nel Rodano, fino al monte Giura,che divide i territori dei Sequani dagli Elvezi. Ultimata l’opera, disponepresidi e costruisce ridotte per respingere con maggior facilità gli Elvezi, seavessero tentato di passare suo malgrado. Quando giunse il giorno fissato congli ambasciatori ed essi ritornarono, Cesare disse che, conforme alle tradizionie ai precedenti del popolo romano, non poteva concedere ad alcuno il transitoattraverso la provincia e si dichiarò pronto a impedir loro il passaggio nelcaso cercassero di far ricorso alla forza. Gli Elvezi, persa questa speranza,cercarono di aprirsi un varco sia di giorno, sia, più spesso, di notte, o permezzo di barche legate insieme e di zattere, che avevano costruito in grannumero, o guadando il Rodano nei punti in cui era meno profondo. Respinti dallefortificazioni e dall’intervento dei nostri soldati, rinunciarono ai lorotentativi.</p>
+  </section>
+
+  <section>
+      <a href="liberI(2).html" class="button">Leggi la continuazione</a>
+  </section>
+
+  <footer>
+     <p>&copy; 2025 Biblioteca Digitale dei <em>Commentarii</em> di Cesare - Tutti i diritti riservati.</p>
+        <p> Alessandra De Divitiis IU a.a. 2024/2025.</p>
+
+    <script>
+    document.getElementById("search-form").addEventListener("submit", function (event) {
+        event.preventDefault(); 
+        let searchText = document.getElementById("search-input").value.trim();
+    
+        if (searchText === "") return; 
+
+        let content = document.getElementById("text-container"); 
+        let regex = new RegExp(searchText, "gi"); 
+        let originalText = content.textContent; /
+
+        let highlightedText = originalText.replace(regex, match => `<span class="highlight">${match}</span>`);
+        content.innerHTML = highlightedText; 
+    });
+
+      function searchText(event) {
+        event.preventDefault();
+
+        const query= document.getElementById("searchInput").value.toLowerCase();
+
+        const paragraphs = document.querySelectorAll(".book-text p");
+        paragraphs.forEach(p => {
+          const text = p.textContent.toLowerCase();
+
+          p.innerHTML = p.textContent;
+
+          if (text.includes(query)) { 
+            const regex = new RegExp(query, 'gi');
+            p.innerHTML = p.innerHTML.replace(regex, match => `<span class="highlight">${match}</span>`);
+          }
+        });
+       }
+</script>
+  </footer>
+</body>
+</html>

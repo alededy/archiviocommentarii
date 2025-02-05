@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Bello Gallico - Archivio dei Commentarii di Cesare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: bold;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-image: url('papiro.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            border: 4px groove #665e47; 
+            color: #333;
+            overflow-x: hidden; 
+        }
+
+        .button {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: bold;
+        }
+       
+        header {
+            background-image: url("immagine1.jpg"); 
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            text-shadow: 2px 2px 5px black;
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex; 
+            justify-content: center;
+            transition: transform 0.5s ease;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            display: block;
+            padding: 8px 15px;
+            background-color: #4a2a2a;
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: #6f3f3f;
+            transform: scale(1.1);
+            text-shadow: 2px 2px 5px black;
+        }
+
+        header nav ul li a:focus {
+            outline: none;
+            border: 2px solid #fff;
+        }
+
+        main {
+            padding: 40px;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            color: #4a2a2a;
+            margin-bottom: 20px;
+        }
+
+        .content-box {
+            background-color: #faf6ef;
+            font-weight: 1.4em;
+            border: 2px solid #4a2a2a;
+            padding: 25px;
+            margin: 30px auto;
+            width: 80%;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #4a2a2a;
+            margin: 20px 0;
+        }
+
+        .interactive-box {
+            background-color: #f0f0f0;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 8px;
+            border: 2px solid #4a2a2a;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .interactive-box h3 {
+            font-size: 2em;
+            color: #4a2a2a;
+            margin-bottom: 20px;
+        }
+
+        .books-container {
+            display: flex;           
+            justify-content: center;          
+            gap: 20px;                
+        }
+
+        .book-folder {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #faf6ef;
+            border: 1px solid #4a2a2a;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+            width: 120px;
+            margin: 10px auto;
+        }
+
+        .book-folder:hover {
+            background-color: #faf6ef;
+        }
+
+        .book-folder .book-icon img {
+            width: 50px;
+            height: auto;
+        
+        }
+
+        .book-folder span {
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #262626;
+            color: white;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .content-box {
+                width: 90%; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>De Bello Gallico</h1>
+        <nav>
+            <ul>
+                <li><a href="archiviocommentarii.html">Home</a></li>
+                <li><a href="giuliocesare.html">Su Giulio Cesare</a></li>
+                <li><a href="pagina2.html">Sul De Bello Gallico</a></li>
+                <li><a href="suldebellocivili.html">Sul De Bello Civili</a></li>
+                <li><a href="#galleria">Galleria artistica</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Estratti Significativi</h2>
+            <div class="content-box">
+                <p class="quote">"Veni, vidi, vici." — La famosa frase che Cesare pronunciò dopo la rapida vittoria nella battaglia contro Farnace II di Ponto nel 47 a.C., ma anche il modo in cui lo stile breve e incisivo del *De Bello Gallico* riflette il suo approccio alle conquiste.</p>
+                <p class="quote">"L'audacia è la migliore strategia." — Un altro insegnamento militare che emerge dall'opera, in cui Cesare riflette su come l'impiego del coraggio sia spesso più efficace delle numerose forze in campo.</p>
+            </div>
+
+            <h2>Esplora il De Bello Gallico (traduzione italiana)</h2>
+            <div class="book-folder">
+               <a href="liberI.html" class="book-icon">
+                <img src="pngegg.png" alt="Liber I">
+                <span>Liber I</span>
+               </a>
+                <button class="button" onclick="alert('Leggi il passo completo nel testo originale!')">Leggi un estratto</button>
+                <a href="liberI(2).html" class="book-icon">
+                <span>Liber II</span>
+               </a>
+                <button class="button" onclick="alert('Leggi il passo completo nel testo originale!')">Leggi un estratto</button>
+                <a href="esempio.html" class="book-icon">
+                <span>Liber III</span>
+               </a>
+                <button class="button" onclick="alert('Leggi il passo completo nel testo originale!')">Leggi un estratto</button>
+                <a href="esempio.html" class="book-icon">
+                <span>Liber IV</span>
+               </a>
+                <button class="button" onclick="alert('Leggi il passo completo nel testo originale!')">Leggi un estratto</button>
+                <a href="esempio.html" class="book-icon">
+                <span>Liber V</span>
+               </a>
+                <button class="button" onclick="alert('Leggi il passo completo nel testo originale!')">Leggi un estratto</button>
+                <a href="esempio.html" class="book-icon">
+                <span>Liber VI</span>
+               </a>
+                <button class="button" onclick="alert('Leggi il passo completo nel testo originale!')">Leggi un estratto</button>
+                <a href="esempio.html" class="book-icon">
+                <span>Liber VII</span>
+               </a>
+                <button class="button" onclick="alert('Leggi il passo completo nel testo originale!')">Leggi un estratto</button>
+                <a href="esempio.html" class="book-icon">
+                <span>Liber VIII</span>
+               </a>
+                <button class="button" onclick="alert('Leggi il passo completo nel testo originale!')">Leggi un estratto</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Biblioteca Digitale dei <em>Commentarii</em> di Cesare - Tutti i diritti riservati.</p>
+        <p> Alessandra De Divitiis IU a.a. 2024/2025.</p>
+        <a href="webprojectplan.html"><u>Web Project Plan</u></a>
+    </footer>
+</body>
+</html>

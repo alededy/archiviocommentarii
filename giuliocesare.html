@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giulio Cesare - Archivio dei Commentarii di Cesare</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+         body {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: bold;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-image: url('papiro.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            border: 4px groove #665e47; 
+            color: #333;
+            overflow-x: hidden; 
+        }
+
+        .elenco-box {
+            background-color: #faf6ef;
+            font-weight: 1.4em;
+            border: 2px solid #4a2a2a;
+            padding: 25px;
+            margin: 30px auto;
+            width: 80%;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .elenco-box.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .elenco-box h3 {
+            color: #4a2a2a;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .elenco-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .elenco-box ul li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .gallery-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .gallery-section {
+            margin-bottom: 30px;
+        }
+
+        .gallery-section h3 {
+            font-size: 2em;
+            color: #4a2a2a;
+            margin-bottom: 10px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .gallery img {
+            max-width: 48%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+        
+        button {
+            font-family: 'Cormorant Garamond', serif; 
+            font-size: 1.2em; 
+            padding: 12px 25px;
+            background-color: #4a2a2a;
+            color: white;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #7b3d3d;
+            transform: scale(1.1);
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background-color: #4a2a2a;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1.3em;
+            transition: background-color 0.3s, transform 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #7b3d3d;
+            transform: scale(1.1);
+        }
+
+        header {
+            background-image: url("immagine1.jpg"); 
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+            text-shadow: 2px 2px 5px black;
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        h4 {
+            font-size: 1.8em;
+            font-weight: bold;
+        }
+        
+        p {
+            font-size: 1.2em;
+        }
+
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex; 
+            justify-content: center;
+            transition: transform 0.5s ease;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            display: block;
+            padding: 8px 15px;
+            background-color: #4a2a2a;
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: #6f3f3f;
+            transform: scale(1.1);
+            text-shadow: 2px 2px 5px black;
+        }
+
+        header nav ul li a:focus {
+            outline: none;
+            border: 2px solid #fff;
+        }
+
+        .biografia-box {
+            background-color: #faf6ef;
+            font-weight: 1.4em;
+            border: 2px solid #4a2a2a;
+            padding: 25px;
+            margin: 30px auto;
+            width: 80%;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(100px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .biografia-box.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .biografia-box h3 {
+            color: #4a2a2a;
+            margin-bottom: 15px;
+            font-size: 2em;
+        }
+
+        .biografia-box ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .biografia-box ul li {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        main {
+            padding: 40px;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        img {
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            width: 20%;  
+            height: auto;
+            display: block; 
+            margin: 20px auto; 
+            transition: transform 0.3s ease
+        }
+
+        img.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+ 
+        img:hover {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #262626;
+            color: white;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            img {
+                width: 60%; 
+            }
+
+            .biografia-box {
+                width: 90%; 
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Giulio Cesare</h1>
+        <nav>
+            <ul>
+                <li><a href="archiviocommentarii.html">Home</a></li>
+                <li><a href="#raccolta">Raccolta</a></li>
+                <li><a href="pagina1.html">Su Giulio Cesare</a></li>
+                <li><a href="suldebellogallico.html">Sul De bello Gallico</a></li>
+                <li><a href="suldebellocivili.html">Sul De bello Civili</a></li>
+                <li><a href="#galleria">Galleria artistica</a></li>
+                <li><a href="#contatti">Contatti</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="biografia-box">
+                <h3>Biografia di Giulio Cesare</h3>
+                <ul>
+                    <li><strong>Nome originale:</strong> Gaius Iulius Caesar</li>
+                    <li><strong>Titoli:</strong> Padre della Patria, Divo Giulio</li>
+                    <li><strong>Nascita:</strong> Roma, 12 o 13 luglio 100 a. C.</li>
+                    <li><strong>Morte:</strong> Roma, 15 marzo 44 a. C</li>
+                    <li><strong>Coniuge:</strong> Cossuzia, Cornelia Cinna Minore, Pompea, Calpurnia</li>
+                    <li><strong>Figli:</strong> Giulia, Cesarione, Ottaviano (adottivo)</li>
+                    <li><strong>Gens:</strong> Giulia</li>
+                    <li><strong>Padre:</strong> Gaio Giulio Cesare Il Vecchio</li>
+                    <li><strong>Madre:</strong> Aurelia Cotta</li>
+                    <li><strong>Questore:</strong> 69 a. C.</li>
+                    <li><strong>Edile:</strong> 65 a. C.</li>
+                    <li><strong>Pretore:</strong> 62 a. C.</li>
+                    <li><strong>Propetore:</strong> 61 a. C.</li>
+                    <li><strong>Console:</strong> 59 a. C., 48 a.C., 46 a.C., 45 a.C., 44 a.C.</li>
+                    <li><strong>Dittatore:</strong> 49-44 a. C</li>
+                    <li><strong>Pontefice Massimo:</strong> 63-44 a.C.</li>  
+                </ul>
+            </div>
+        </section>
+
+        <div class="fuori-dal-box">
+
+            <h4><u>Il Praenomen</u></h4>
+            <p>Spesso si scrive Caio Giulio Cesare, ma il nome corretto è Gaio Giulio Cesare. La corruzione di Gaio in Caio deriva dalla tradizione latina che abbreviava con C. il praenomen Gaius (Gaio) e con Cn. il praenomen Gnaeus (Gneo). Tali tradizionali abbreviazioni derivano a loro volta dal fatto che gli Etruschi, che esercitarono una forte influenza sulla prima fase storica di Roma, non distinguevano fra la "G" e la "C". Pertanto il suo vero nome era Gaio Giulio Cesare. « E' opera di Cesare se, dalla passata grandezza dell'Ellade e dell'Italia un ponte conduce all'edificio più magnifico della moderna storia del mondo, se l'Europa occidentale è romanza, se l'Europa germanica è classica... l'edificio di Cesare è durato oltre le migliaia d'anni che hanno cambiato religione e Stato al genere umano e che hanno mutato perfino il centro di gravità della Civiltà e continua ad esistere per quella che noi chiamiamo eternità. » (Theodor Mommsen, La storia di Roma, V, 7.).</p>
+            <img src="cesareragazzo.jpg" alt="Statua di cesare fanciullo">
+            <p>Volto di Cesare fanciullo</p>
+
+            <h4><u>La nascita e la carriera</u></h4>
+            <p>Cesare nacque il 12 o 13 luglio del 100 a.c. a Roma da un'antica e gloriosa ma non ricca famiglia patrizia, la gens Iulia, che faceva risalire le sue origini a Iulo, figlio di Enea, che aveva come madre la stessa Dea Venere. Come dire che era una stirpe divina, il che deve aver influenzato non poco le ambizioni di Cesare, unitamente ad un'intelligenza e una mobilità mentale non comune. Fin da giovanissimo Cesare coltivò grandi ambizioni, voleva essere sempre il primo, come confessò più tardi ai suoi amici riferendosi ad una povera tribù barbara della propretura in Spagna: 'Vorrei essere il primo tra costoro piuttosto che il secondo a Roma'. Il ramo della Gens Iulia a cui apparteneva portava il cognome Caesar, da cui il nome Giulio Cesare.</p>
+            <img src="ziodicesare.jpg">
+            <p>Busto di Gaio Mario</p>
+
+            <p>La famiglia però non era ricca né influente, ostacolo insormontabile per chiunque volesse accedere a una carriera politica o militare, per cui Cesare dovette contrarre sempre ingenti debiti rischiando il tutto per tutto, ma Cesare affrontò grandi rischi di ogni genere nella sua vita. Suo grande maestro fu lo zio Gaio Mario, Generale e Console per sei volte, un eroe dei populares, che lo addestrò nel fisico e nelle armi, e gli inculcò la difesa del popolo e dei deboli contro il potere dei nobili. Però proprio per questo lo zio si era attirato l'ostilità degli Optimates, i senatori nobili, che di riflesso odiarono anche Cesare. Ebbe due sorelle, una delle quali, Giulia minore, fu la madre di Ottaviano, il successore di Cesare. Viveva in una casa della Suburra, quartiere povero e malfamato, il che indica le condizioni economiche della sua famiglia, dove era pericoloso girare di sera, ma dove ebbe come insegnante Antonio Gnifone, illustre grammatico della Gallia.</p>
+            <h4><u>Cesare in campo militare</u></h4>
+            <p>Cesare era uomo dalla grande inventiva e prontezza di riflessi. Le sue strategie non si somigliavano mai, rendendo al nemico imprevedibili i suoi movimenti. Riusciva a prendere iniziative in tempi velocissimi e a fare cose mai fatte prima, come combattere per nave, o muovere guerra in inverno mentre l'esercito romano si muoveva nella stagione calda. I soldati avevano grande fiducia in lui, sia nelle sue capacità, sia nella cura che aveva di risparmiare la loro vita, sia nella generosità ed equità nella spartizione dei bottini; prima di ogni battaglia si rivolgeva al proprio esercito in modo trascinante e nello stesso tempo molto razionale, spiegava loro lo svolgimento della battaglia affinchè fossero preparati alle modifiche. Era così persuasivo da chiedere il loro consenso alle battaglie, anche le più pericolose, per esempio nella guerra civile contro Pompeo, e l'adesione arrivò sempre. Cesare chiamava i suoi soldati commilitoni, cioè cum-militantes, cioè quelli che combattevano insieme a lui; un titolo di parità e non di gerarchia. Li riforniva di ottimi equipaggiamenti, dando loro delle armi decorate con oro e argento per aumentare il loro prestigio, in parte perchè così erano rinforzate, ma soprattutto perchè facessero l'impossibile per non perdere in combattimento armi tanto preziose.</p>
+            <h4><u>Cesare scrittore</u></h4>
+            <p>Da giovane aveva preso a modello, a quanto pare, Strabone Cesare, e nella sua "Divinazione" ne riportò letteralmente alcuni brani, tolti dall'orazione "Per i Sardi". Pronunciava i discorsi, dicono, con voce alta e acuta, e il suo gestire era concitato e ardente, ma non privo di eleganza. Ci rimangono alcune sue orazioni, ma in diversi casi la provenienza non è sicura. Senza alcun dubbio, i commentari sulle gesta nella guerra gallica e in quella civile contro Pompeo rappresentano la più grande e certa fonte di cui disponiamo per quanto riguarda la produzione letteraria attribuita a Cesare. Cicerone così si esprime: "Scrisse anche dei Commentari che si devono assolutamente ammirare: sono nudi, scarni e belli, spogliati di qualsiasi ornamento oratorio come un corpo della sua veste. Ma, mentre volle offrire agli altri il materiale per scrivere la storia, forse fece opera grata agli inetti che vorranno agghindarlo con riccioli artificiosi, ma distolse i sani di mente dallo scriverne"</p>
+
+         <div class="elenco-box">
+            <h3>Stile:</h3>
+            <ul>
+              <li> - Chiarezza ("perspicàitas"): procedimento lineare e terso, privo di pensieri contorti e involuti.</li>
+              <li> - Brevità ("brevitas"): mira all'essenzialità e alla rapidità.</li>
+              <li> - Assenza di ornamenti superflui: come intuì Cicerone.</li>
+              <li> - Eleganza del dettato ("urbanitas"): pochi scrittori della latinità competono con lui in purezza e proprietà linguistica.</li>
+              <li> - Armonia e simmetria dei costrutti: concetto di "concinnitas", definito da Cicerone come il massimo esempio di equilibrio nella scrittura.</li>
+            </ul>
+            <h3>Lessico:</h3>
+            <ul>
+              <li> - Abbandono della tendenza all’arcaismo.</li>
+              <li> - Scelte lessicali mirate, anche a costo di ripetizioni.</li>
+            </ul>
+            <h3>Sintassi:</h3>
+            <ul>
+              <li> - Predilezione per la paratassi sull’ipotassi, per motivi di chiarezza.</li>
+              <li> - Periodare lineare e lucido.</li>
+            </ul>
+         </div>
+
+            <h4><u>Le Idi di marzo</u></h4>
+            <p>Il giorno delle Idi di marzo, il 15, Calpurnia pregò il marito di restare in casa, ma Cesare, che la sera prima aveva detto che avrebbe preferito una morte improvvisa alla lenta vecchiaia, fu convinto da Bruto a recarsi in senato, riferendo che tutti i senatori si erano riuniti per nominarlo re. Lungo la strada verso il Senato, racconta Plutarco, un insegnante di nome Artemidoro, amico di amici di Marco Giunio Bruto, gli mise tra mano un libello in cui gli denunciava la congiura, di cui qualcosa era trapelato. Ma Cesare non potè leggerlo. Giunto alla Curia di Pompeo, fu avvicinato dall'aruspice Spurinna, che lo aveva avvisato di guardarsi dalle Idi di marzo. Mentre Bruto intratteneva Antonio fuori dalla Curia, al segnale Longo sfoderò il pugnale e colpì Cesare al collo, causandogli una ferita superficiale. Allora entrambi, narra Plutarco, cominciarono a urlare, Cesare in latino: "Scellerato Casca, che fai?". E lui, in greco, volgendosi al fratello: "Fratello, aiutami!". Cesare si difese come una belva ferita, finché Bruto, che forse era figlio suo e di Servilia, sua amante, lo colpì all'inguine. e qui Cesare pronunciò le sue ultime parole: - Anche tu Bruto, figlio mio! - Allora si coprì per morire composto, ben sapendo, come lo sapeva anche Socrate morente, che la morte è brutta da vedersi. Sembra ricevette 23 pugnalate. La Curia in cui Cesare era stato ucciso venne murata e le idi di marzo proclamate «giorno del parricidio».</p>
+            <a href="https://www.raiplay.it/video/2023/01/Cronache-Dallantichita---Le-idi-di-Marzo--62f06953-c27e-45cb-86f4-1d0e0c946d4b.html" target="_blank" class="button">Approfondisci su RaiStoria</a>
+    </div>
+        <div class="fuori-dal-box">
+            <p></p>
+    </div>
+</main>
+      </main> 
+    <footer>
+        <p>&copy; 2025 Biblioteca Digitale dei <em>Commentarii</em> di Cesare - Tutti i diritti riservati.</p>
+        <p> Alessandra De Divitiis IU a.a. 2024/2025.</p>
+        <a href="webprojectplan.html"><u>Web Project Plan</u></a>
+    </footer>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.querySelector('.biografia-box').classList.add('visible');
+        });
+
+        window.addEventListener('scroll', () => {
+            const images = document.querySelectorAll('img');
+            images.forEach((image) => {
+                const rect = image.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    image.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

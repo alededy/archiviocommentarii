@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Project Plan</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+    body {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: bold;
+            line-height: 1.8;
+            margin: 0;
+            font-size: 1.2em;
+            padding: 0;
+            background-image: url('papiro.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            border: 4px groove #665e47; 
+            color: #333;
+            overflow-x: hidden; 
+        }
+
+        header {
+            background-image: url("immagine1.jpg"); 
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            text-shadow: 2px 2px 5px black;
+            font-size: 3em;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            position: sticky;
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+            display: flex; 
+            justify-content: center;
+            transition: transform 0.5s ease;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        header nav ul li a {
+            display: block;
+            padding: 8px 15px;
+            background-color: #4a2a2a;
+            color: white;
+            text-decoration: none;
+            border-radius: 15px;
+            font-size: 1em;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            background-color: #6f3f3f;
+            transform: scale(1.1);
+            text-shadow: 2px 2px 5px black;
+        }
+
+        header nav ul li a:focus {
+            outline: none;
+            border: 2px solid #fff;
+        }
+
+        main {
+            padding: 40px;
+            text-align: center;
+            max-width: 1200px;
+            margin: auto;
+        }
+        
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #262626;
+            color: white;
+            position: relative;
+            margin-top: 30px;
+        }  
+</style> 
+</head>
+<body>
+    <header>
+        <h1><u>Web Project Plan</u></h1>
+        <nav>
+            <ul>
+                <li><a href="archiviocommentarii.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>1. Brief</h2>
+
+            <p>1.1 Finalità e obiettivi del progetto:</p>
+<p>Il sito ha come obiettivo quello di offrire una risorsa accessibile e ben strutturata per la consultazione delle opere di Giulio Cesare. La piattaforma intende valorizzare il patrimonio culturale e storico di questi testi, rendendoli fruibili a un pubblico ampio, ma in particolar modo per studenti che affrontano lo studio della letteratura latina. Il sito ha una finalità divulgativa ed educativa, rientrando nell'ambito delle biblioteche digitali dedicate al patrimonio culturale.</p>
+
+<p>1.2 Pubblico di riferimento:</p>
+</p>Il sito è rivolto, come già detto, principalmente agli studenti del liceo, con l'obiettivo di avvicinarli alla letteratura latina attraverso informazioni d'impatto e contenuti che attraggano subito la loro attenzione (come la vicenda delle Idi di marzo ad esempio, argomento che non smette mai di interessare e incuriosire anche coloro che non si ritengono appassionati alle vicende di Cesare). Per rispondere alle esigenze di questi utenti, la piattaforma deve garantire un'interfaccia chiara, un'organizzazione intuitiva dei contenuti e strumenti di navigazione efficaci. L'accesso ai testi deve essere immediato e accompagnato da risorse di supporto, come la navbar per cercare i vari paragrafi dei capitoli.</p>
+
+<p>1.3 Accesso alla risorsa:</p>
+<p>Considerando il target di riferimento, il sito deve essere accessibile da diversi dispositivi, specialmente a smartphone e tablet, strumenti sempre più utilizzati per la consultazione online. La progettazione dell'interfaccia deve quindi garantire una navigazione ottimale su mobile, senza trascurare la fruibilità su PC, grazie a un design responsive.</p>
+
+<p>1.4 Contenuti:</p>
+<p>Nella demo il sito integra diverse tipologie di media per arricchire l'esperienza dell'utente. Oltre ai testi delle opere di Cesare, è presente una galleria dedicata alle opere artistiche che ritraggono Giulio Cesare nel corso della storia, che provvede di inserire quadri, sculture ecc. meno conosciuti.</p>
+
+<p>1.4.2 Sviluppi futuri:</p>
+<p>In una fase successiva del progetto, si prevede di ampliare il numero di testi disponibili, includendo edizioni commentate e traduzioni in diverse lingue. Sarà inoltre possibile arricchire la piattaforma con strumenti interattivi, come una timeline degli eventi narrati da Cesare e collegamenti ipertestuali, quali commenti e critiche, a risorse esterne. Un altro sviluppo possibile le schede di approfondimento come ausilio alla ripetizione e allo studio per gli studenti, che saranno aggiornate costantemente per garantire contenuti accurati e coinvolgenti, favorendo la divulgazione del patrimonio letterario e storico legato a Cesare e ai commentari.</p>
+        </section>
+
+        <section>
+            <h2>2. Benchmark</h2>
+
+            <p>2.1 Idea:</p>
+            <p>Sul web non esiste un sito specificamente dedicato alla divulgazione dei "Commentarii" di Giulio Cesare per un pubblico liceale. Nonostante esistano diverse risorse accademiche e siti che offrono testi latini, nessuno di essi propone un'esperienza pensata per avvicinare i ragazzi del liceo alla letteratura latina attraverso contenuti coinvolgenti e di facile fruizione. Inoltre, le biblioteche digitali disponibili online non sono generalmente progettate con un focus sull'accessibilità da smartphone, un aspetto cruciale per il target di riferimento del progetto.</p>
+
+            <p>2.2 Contenuti esistenti:</p>
+
+            <p>2.2.1 Wikidata</p>
+            <p>Wikidata è un database collaborativo che fornisce dati strutturati su una vasta gamma di argomenti, inclusa la storia romana. Tuttavia, i dati presenti su Giulio Cesare e le sue opere sono principalmente nozionistici e non offrono un'esperienza di lettura e approfondimento adatta agli studenti liceali. Questo sito punta a integrare informazioni in modo più accessibile e coinvolgente.</p>
+            <p>2.2.2 Europeana:</p>
+
+            <p>Europeana raccoglie il patrimonio culturale digitale europeo, fornendo accesso a immagini, testi e modelli 3D. La sua architettura d'interfaccia ha offerto spunti per il nostro progetto, in particolare: il design con largo uso di spazi bianchi, la section con titolo, sottotitolo, barra di ricerca e immagine di sfondo (utilizzata per la sezione dei testi), sezioni interattive che facilitano la navigazione tra i contenuti (galleria di immagini).</p>
+
+            <p>2.2.3 Romanoimpero.com:</p>
+            <p>Romanoimpero.com offre contenuti divulgativi sulla storia romana con un approccio narrativo estremamente dettagliato e coinvolgente. Tuttavia, manca un'organizzazione strutturata e un'interfaccia user-friendly adatta a un pubblico liceale. Il nostro sito punta a offrire un'esperienza più ordinata e interattiva, raccogliendo le informazioni più importanti ed intriganti fornite nello specifico anche da questo sito di storia romana.</p>
+
+            <p>2.2.4 Alamy:</p>
+            <p>Alamy è una piattaforma che fornisce immagini difficilmente reperibili sul web di alta qualità, incluse raffigurazioni storiche e artistiche di Giulio Cesare con tanto di informazioni e datazione. Questa risorsa è utile per arricchire la nostra galleria di opere artistiche, rendendo il sito più visivamente coinvolgente.</p>
+
+            <p>2.2.5 Wikipedia:</p>
+            <p> Wikipedia, senza alcun dubbio, è una delle fonti più utilizzate per reperire informazioni su Giulio Cesare e le sue opere. Tuttavia, gli articoli spesso risultano troppo tecnici per un pubblico a cui il nostro sito mira. Inoltre, il modo in cui le informazioni sono ordinate potrebbe risultare eccessivamente dispersivo alle volte.</p>
+
+            <p>2.2.6 RaiPlay:</p>
+            <p>RaiPlay offre numerosi documentari e programmi culturali, inclusi alcuni dedicati alla storia romana. L'approccio audiovisivo è un elemento che il nostro sito intende riprendere, integrando video e mappe interattive per rendere lo studio dei "Commentarii" più coinvolgente e accessibile. In particola, nel sito è allegata una puntata di una collezione di vicende storiche travolgente che tratta proprio delle Idi di marzo - è anche la visione di documentari di questo genere che contribuisce alla divulgazione della cultura.</p>
+        </section>
+
+        <section>
+            <h2>3. Struttura (Mappa, Schema e Categorie)</h2>
+
+            <p>3.1 Mappa dei concetti:</p>
+            <p>Per la definizione della struttura del sito è stata realizzata una mappa concettuale su supporto cartaceo, con una suddivisione chiara delle principali entità e relazioni. Questa metodologia ha permesso di avere una visione d'insieme immediata e di apportare modifiche rapide prima della trasposizione digitale. Le principali entità individuate sono: i testi antichi; l'autore trattato; le opere artistiche correlate e le risorse multimediali. Le relazioni nella mappa concettuale sono state descritte attraverso etichette chiare e descrittive. Sono stati utilizzati "rapporti" come "autore di", "rappresentato in", "contenuto in" e "influenzato da". Lo schema ha consentito di navigare facilmente tra i diversi contenuti.</p>
+
+            <p>3.2 Schema delle dipendenze:</p>
+            <p>Il sito presenta una navigazione molto semplice e immediata. Dalla home page è possibile accedere direttamente alle sezioni principali tramite il menu di navigazione: opere (raccolta digitale dei testi), autore (sezione con schede descrittive sulla biografia), galleria (spazio dedicato alle opere artistiche ispirate a Giulio Cesare). Dalle pagine delle opere, si può navigare verso la scheda dell'autore e viceversa.</p>
+        </section>
+
+        <section>
+            <h2>4. Layout</h2>
+
+            <p>4.1 Homepage:</p>
+            <p>4.1.1 L'architettura di interfaccia:</p>
+            <p>L’interfaccia del sito è progettata per garantire un accesso rapido e intuitivo a tutti i contenuti principali. Nella parte superiore di ogni pagina, all'interno dell’header, si trovano sempre disponibili: il titolo del sito per un immediato riconoscimento e una barra di navigazione orizzontale con i collegamenti principali alle sezioni del sito.
+            Il corpo della home page è strutturato in più sezioni: una hero section che introduce la biblioteca digitale, con un titolo esplicativo e una breve descrizione della collezione; un’area dedicata ai testi, con un’anteprima delle opere disponibili e collegamenti rapidi alle schede dettagliate; una galleria interattiva che espone opere artistiche raffiguranti Giulio Cesare, una sezione introduttiva con informazioni sul contesto storico delle opere presenti nel sito. Nel footer, vengono fornite informazioni utili come: il nome della creatrice del sito; informazioni sui diritti d’autore e sulla licenza d’uso dei contenuti e il collegamento al web project plan.</p>
+
+            <p>4.2 Pagine delle opere:</p>
+            <p>Nella pagina dedicata ai testi, la navigazione è facilitata da una suddivisione chiara dei contenuti. Gli utenti possono accedere alle opere attraverso un elenco interattivo che mostra i testi disponibili.</p>
+
+            <p>4.3 Pagina della galleria:</p>
+            <p>La galleria interattiva è una sezione centrale del sito, progettata per offrire una panoramica visuale delle opere artistiche dedicate a Giulio Cesare. Le foto sono disposte tin una griglia di anteprima. Si possono visualizzare immagini di busti, mosaici e dipinti; è possibile cliccare su un elemento per aprire una pagina di con informazioni  sull'opera,l’autore e il periodo storico.</p>
+        </section>
+
+        <section>
+            <h2>5. Usabilità</h2>
+
+            <p>Architettura d'interfaccia:</p>
+            <p>L'architettura dell'interfaccia è stata progettata per garantire un'esperienza utente intuitiva. Per quanto riguarda la struttura: la posizione degli strumenti di navigazione primaria resta invariata in tutte le pagine e il contenuto è organizzato in sezioni ben definite.
+
+            <p>Layout:</p>
+            <p>L'aspetto visivo del sito è stato progettato per evocare un'estetica classica e antica, richiamando una pergamena. Per questo motivo, sono stati adottati alcuni accorgimenti: il layout è caratterizzato da colori che richiamano la carta ingiallita e l'inchiostro antico, con tonalità calde che migliorano la leggibilità e creano un'atmosfera suggestiva; gli elementi interattivi, come i pulsanti, sono stati stilizzati per armonizzarsi con l'aspetto storico senza compromettere l'usabilità.
+
+            <p>Dal punto di vista della scrittura: il font selezionato imita la scrittura di epoca classica, ma è stato scelto in modo da garantire un'alta leggibilità; i testi sono concisi e strutturati con un'interlinea adeguata per migliorare la leggibilità anche su schermi di piccole dimensioni; l'uso del grassetto evidenzia concetti chiave per facilitare la comprensione immediata dei contenuti. Dove necessario, le informazioni vengono presentate progressivamente: una breve introduzione anticipa contenuti più dettagliati, accessibili tramite pulsanti o sezioni espandibili. In questo modo, l'interfaccia del sito non solo garantisce una navigazione efficace, ma contribuisce anche a immergere gli utenti in un'atmosfera storica, rendendo l'esperienza più coinvolgente e stimolante per gli studenti.</p>
+        </section>
+
+        <section>
+            <h2>6. Servizi</h2>
+            
+            <p>Strumenti di browsing:</p>
+            <p>Oltre ai tradizionali canali, sono stati implementati ulteriori sistemi di browsing per facilitare l’accesso ai contenuti e migliorare l’esperienza dell’utente, come la searchbar nella sezione dedicata ai testi, dove gli utenti hanno la possibilità di affinare la ricerca cercando un termine particolare all'interno del testo. Nella home sono allegate, come altro strumento di interazione, le pagine Wikipedia dei commentarii, per avvicinare chi visita il sito alla lettura delle opere. Si potrebbero sicuramente immaginare in aggiunta un esploratore di connessioni: una visualizzazione grafica che mostra le relazioni tra personaggi, eventi e luoghi citati, aiutando i lettori a comprendere meglio il contesto.</p>
+
+            <p>Utilities e tools:</p>
+            <p>Altri tools che potrebbero essere integrati sarebbero: 1) lettura testuale interattiva (funzione di evidenziare passaggi e aggiungere note personali); 2) una mappa interattiva delle campagne militari (per contribuire alla comprensione del contesto geografico degli argomenti trattati); 3) un modulo di quiz (perfetto per studenti che vogliono testare la propria conoscenza delle opere rendendo lo studio più coinvolgente); 4) esplorazione cronologica (per seguire in maniera più efficiente vicende storiche e narrative); 5) ricostruzione 3d di manoscritti (area dedicata allo sfoglio delle versioni più antiche dei commentarii).</p>
+
+            <p>Strumenti per l'accesso:</p>
+            <p>Alcuni strumenti potrebbero essere: 1) accessibilità avanzata (lettura vocale dei testi o modalità ad alto contrasto per utenti con difficoltà uditive/visive); 2) integrazione con più risorse esterne per fornire più informazioni; 3) sistema di download delle immagini fornite dalla galleria; 4) area di forum e discussoni per condividere interpretazioni e interagire con altri studenti.</p>
+        </section>
+
+        <section>
+            <h2>7. Bibliografia</h2>
+
+            <p>Per il progetto (si è lavorato su Sublime Text Code):</p>
+            <p> - Francesca Tomasi, Metodologie informatiche e discipline umanistiche</p>
+            <p> - Francesca Tomasi, slide del corso di Informatica Umanistica, a.a. 2024-2025</p>
+
+            <p>Per i contenuti:</p>
+            <p> - Wikipedia</p>
+            <p> - Wikidata</p>
+            <p> - Europeana</p>
+            <p> - Romanoimpero.com</p>
+            <p> - Internet Archive</p>
+            <p> - Treccani</p>
+
+            <p>Per layout:</p>
+            <p> - Tutorial su Youtube di freeCodeCamp.org</p>
+
+            <p>Per il codice:</p>
+            <p> - Slide del corso</p>
+            <p> - W3schools</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Archivio dei commentarii di Cesare. Tutti i diritti riservati.</p>
+        <p>Alessandra De Divitiis IU a.a. 2024/2025.</p>
+    </footer>
+</body>
+</html>
